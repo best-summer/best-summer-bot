@@ -5,7 +5,7 @@ var request = require('request');
 const app = express();
 
 var registerdToken = 'VNRER3lMlUPzRMeuaerBgrfP';
-var botName = 'best-summer'
+var botName = 'best-summer';
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -16,7 +16,7 @@ app.listen(process.env.PORT || 1337);
 
 function sendResponse(res,text){
     var payload = {
-      "text": response,
+      "text": text,
       "username":'best-summer'
     };
     res.send(200, JSON.stringify(payload));
