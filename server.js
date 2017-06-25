@@ -36,7 +36,7 @@ app.post('/', function (req, res) {
 
   if(text.indexOf('@'+botName) != -1){
     message = text.replace('@'+botName,'');
-    sendResponse(res,'@'+user_name+' エモ '+token);
+    sendResponse(res,'@'+user_name+' エモ');
   }else{
     var rand = Math.floor(Math.random()*5);
     if(rand == 0){
