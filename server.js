@@ -26,19 +26,14 @@ app.post('/', function (req, res) {
   }
   
   var payload = {
-    uri: webhookUrl,
-    headers: {
-      "Content-type": "application/json"
-    },
-    json: {
       "text": response,
       "username":'best-summer'
-    }
   };
 
+/*
   request.post(payload, function (error, response, body) {
     console.log(JSON.stringify(response));
   });
-  
-  res.send(200, JSON.stringify(body));
+  */
+  res.send(200, JSON.stringify(payload));
 })
