@@ -38,7 +38,7 @@ app.post('/', function (req, res) {
     message = text.replace('@'+botName,'');
     sendResponse(res,'@'+user_name+' エモ');
   }else{
-    var rand = Math.floor(Math.random()*5);
+    var rand = Math.floor(Math.random()*10);
     if(rand == 0){
         sendResponse(res,'エモい～');
     }else if(rand == 1){
