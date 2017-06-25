@@ -6,6 +6,7 @@ const app = express();
 
 var webhookUrl = 'https://hooks.slack.com/services/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';
 var registerdToken = 'VNRER3lMlUPzRMeuaerBgrfP';
+var botName = 'best-summer'
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -30,12 +31,12 @@ app.post('/', function (req, res) {
   var trigger_word = body['trigger_word'];
   var response = '';
 
-  if(token != registerdToken){
+  if(token !== registerdToken){
       return;
   }
 
-  if(text.indexOf('@best-summer') != -1){
-    message = text.replace('@best-summer','');
+  if(text.indexOf('@'+botName) != -1){
+    message = text.replace('@'+botName,'');
     sendResponse(res,'@'+user_name+' エモ');
   }else{
     var rand = Math.floor(Math.random()*5);
