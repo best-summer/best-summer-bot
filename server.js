@@ -17,7 +17,7 @@ app.listen(process.env.PORT || 1337);
 function sendResponse(res,text){
     var payload = {
       "text": text,
-      "username":'best-summer'
+      "username":'Alice'
     };
     res.send(200, JSON.stringify(payload));
 }
